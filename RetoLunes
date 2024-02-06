@@ -1,0 +1,22 @@
+# Primero, definimos una función para recoger los datos del usuario.
+def registro_usuario():
+    print ("Por favor, ingrese los siguientes datos para registrarse en el sistema:")
+  
+    nombre = input("Ingrese su nombre: ")
+    apellido = input("Ingrese su apellido: ")
+    telefono = input("Ingrese su número de teléfono: ")
+    correo = input("Ingrese su correo electrónico: ")
+  
+    return nombre, apellido, telefono, correo
+
+# Luego, definimos una función para dar la bienvenida al usuario.
+def bienvenida(usuario):
+    nombre_completo = usuario[0] + " " + usuario[1]
+    correo_usuario = usuario[3]
+  
+    print("Hola " + nombre_completo + ", en breve recibirás un correo a " + correo_usuario)
+
+
+# Ahora, simplemente llamamos a las funciones.
+usuario = registro_usuario()
+bienvenida(usuario)
